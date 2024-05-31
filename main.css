@@ -2,8 +2,31 @@ html {
     font-size: 22px;
 }
 body {
-    background-color: rgb(170, 119, 218);
-    color: rgb(0, 255, 255);
+    background-color: #EDE8F5;
+    color: rgb(69, 132, 226);
+}
+
+.logo{
+    text-align: center;
+    border-radius: 10px;
+}
+
+.logo img {
+    width: 204px;
+    height: 192px;
+}
+
+
+.top{
+    text-align: 10px;
+    display: inline;
+    margin: 870px;
+    letter-spacing: 1px;
+}
+
+.top_two{
+    text-align: end;
+    display: inline;
 }
 
 table, tr,th,td caption{
@@ -11,4 +34,29 @@ table, tr,th,td caption{
     font-family: 'Courier New', Courier, monospace;
     border-collapse: collapse;
     padding: 0.10rem;
+}
+
+.header{
+    background-color: rgb(156, 84, 192);
+    color: #fff;
+    padding-left: 5px;
+    padding: 5px;
+    border: 3px;
+    border-style: solid;
+    border-color: goldenrod;
+    
+
+}
+
+.step{
+    text-align: center;
+}
+
+li{
+    color: rgb(163, 6, 6);
+    display: inline;
+    padding: 5px;
+    margin-right: 5px;
+    text-size-adjust: auto;
+    
 }
