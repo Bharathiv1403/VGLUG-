@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #9cb7bb;
+    color: rgb(36, 38, 43);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(160, 180, 184);
+    padding: 20px;
+    border-bottom: 3px solid goldenrod;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.logo img {
+    width: 204px;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+main {
+    padding: 20px;
+}
+.top_two{
+    &:hover{
+        color: black;
+        background-color: violet;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 2px solid #c13be2;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(156, 84, 192);
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: rgb(69, 132, 226);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(49, 112, 206);
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5em; /* Slightly smaller text on mobile */
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 5px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2, h3 {
+        font-size: 1.4em;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 0.9em; /* Smaller font size for smaller devices */
+    }
+}

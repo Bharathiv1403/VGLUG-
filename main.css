@@ -1,4 +1,4 @@
-html {
+/* html {
     font-size: 22px;
 }
 body {
@@ -59,4 +59,101 @@ li{
     margin-right: 5px;
     text-size-adjust: auto;
     
+} */
+html {
+    font-size: 22px;
+}
+
+body {
+    background-color: #EDE8F5;
+    color: rgb(69, 132, 226);
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    text-align: center;
+    border-radius: 10px;
+}
+
+.logo img {
+    width: 100%; /* Make image responsive */
+    max-width: 204px; /* Limit max size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.top {
+    text-align: center; /* Use center instead of a fixed value */
+    display: inline-block; /* Change to inline-block for better layout control */
+    margin: 20px auto; /* Center with auto margins */
+    letter-spacing: 1px;
+}
+
+.top_two {
+    text-align: right;
+    display: inline-block; /* Use inline-block for consistency */
+}
+
+table, tr, th, td, caption {
+    border: 2px solid #c13be2;
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: 0.10rem;
+    width: 100%; /* Make table responsive */
+    max-width: 600px; /* Limit max size */
+    margin: auto; /* Center the table */
+}
+
+.header {
+    background-color: rgb(156, 84, 192);
+    color: #fff;
+    padding: 10px; /* Increased padding for better touch target */
+    border: 3px solid goldenrod; /* Fixed border style */
+}
+
+.step {
+    text-align: center;
+}
+
+li {
+    color: rgb(163, 6, 6);
+    display: inline-block; /* Change to inline-block */
+    padding: 5px;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 18px; /* Decrease font size on smaller screens */
+    }
+
+    .top {
+        margin: 10px auto; /* Adjust margin */
+    }
+
+    .header {
+        font-size: 1.2em; /* Scale header size */
+    }
+
+    li {
+        margin-right: 2px; /* Decrease margin */
+    }
+
+    .logo img {
+        max-width: 100%; /* Ensure logo is responsive */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 16px; /* Further decrease font size */
+    }
+
+    .header {
+        padding: 5px; /* Reduce padding */
+    }
+
+    table, tr, th, td {
+        font-size: 0.9em; /* Scale down table font size */
+    }
 }

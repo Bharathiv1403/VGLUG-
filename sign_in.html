@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="sign_in.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Sign In to Your Account</h1>
+    </header>
+    
+    <main>
+        <form action="https://httpbin.org/post" method="POST" onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Sign In</legend>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="you@example.com" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit">Sign In</button>
+            </fieldset>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            if (!email || !password) {
+                alert('Please fill out both fields.');
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>
