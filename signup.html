@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Create Your Account</h1>
+    </header>
+    
+    <main>
+        <form action="https://httpbin.org/post" method="POST" onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Sign Up</legend>
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Enter your last name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="you@example.com" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Create a password" required>
+                </div>
+                <div>
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </fieldset>
+        </form>
+        <p>Already have an account? <a href="sign_in.html">Sign In</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>
