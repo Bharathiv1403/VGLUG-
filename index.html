@@ -218,15 +218,33 @@
     </main>
 
     <script>
-        function validateForm() {
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            if (!firstName || !lastName) {
-                alert('Please fill out both your first and last names.');
-                return false; // Prevent form submission
-            }
-            return true; // Allow form submission
-        }
+function validateForm() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const phone = document.getElementById('phone').value;
+    const password = document.getElementById('password').value;
+
+    // Basic validation for names
+    if (!firstName || !lastName) {
+        alert('Please fill out both your first and last names.');
+        return false; 
+    }
+
+    // Basic validation for phone number format (10 digits)
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phone.match(phonePattern)) {
+        alert('Please enter a valid 10-digit phone number.');
+        return false;
+    }
+
+    // Password validation (min length 8)
+    if (password.length < 8) {
+        alert('Password must be at least 8 characters long.');
+        return false;
+    }
+
+    return true; 
+}
     </script>
 </body>
 </html>
